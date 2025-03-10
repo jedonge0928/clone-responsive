@@ -12,7 +12,7 @@ export default function Home() {
     { id: 4, title: "치아보험", description: "개수제한 없는 충전치료 보장" },
   ];
   return (
-    <div className="w-screen">
+    <div>
       <header className="w-full max-w-[1140px] mx-auto hidden md:flex md:flex-col">
         <div className="justify-between text-[14px] max-w-[1140px] items-center h-[70px] flex">
           <ul className="flex gap-1">
@@ -128,7 +128,7 @@ export default function Home() {
         </div>
       </header>
       <main className="w-full max-w-[1140px] m-auto hidden md:flex md:flex-col">
-        <section className="flex  items-center h-[493px] md:flex-col">
+        <section className="flex  w-full items-center h-[493px] md:flex-col">
           <div className=" flex justify-between  w-full ">
             <div className="w-[753px] y-[394px] p-8 bg-blue-300 rounded-lg shadow-2xl">
               <div className=" flex justify-between ">
@@ -177,6 +177,76 @@ export default function Home() {
               ))}
             </ul>
             <div className="w-[368px]  h-[224px] flex justify-center items-center p-8 flex-col gap-2 bg-blue-500 shadow-xl">
+              <p>보험 가입 문의</p>
+              <div>
+                <h2>빠르고 간편하게 보험 가입 상담</h2>
+                <p>이미지</p>
+              </div>
+              <p>080-410-8181</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <main className="w-full max-w-[1140px] m-auto md:hidden flex flex-col ">
+        <section className="flex  w-full items-center flex-col p-3">
+          <div className=" flex justify-between  w-full flex-col">
+            <div className="w-full  p-5 bg-blue-300 rounded-lg shadow-xl mb-3">
+              <div className=" flex justify-between  items-center">
+                <div className="flex flex-col justify-around  ">
+                  <h2 className="w-full py-3 leading-10 text-2xl font-extrabold">
+                    the 건강보험
+                  </h2>
+                  <h1 className="  leading-10">
+                    질병 수술 받을 때마다 매번 보험금 지금
+                  </h1>
+                  <button className="px-15  rounded-md bg-white leading-10 shadow-xl hover:bg-black hover:text-white duration-150 ">
+                    보험료 계산/상담
+                  </button>
+                  <div className="leading-10">
+                    <p>가입 후 91보장</p>
+                    <p>갱신시 보험료 인상 가능</p>
+                    <p>준법감시인 확인필 제2024-05-05</p>
+                  </div>
+                </div>
+                <div className="bg-gray-800 px-7 py-22 text-white">
+                  <p>이미지공간입니다.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="p-8 flex flex-col  justify-between items-center bg-gray-300 rounded-lg shadow-xl text-[15px] gap-2 ">
+                <p className="bg-white w-full py-3 text-center hover:bg-blue-200 duration-150 rounded-full">
+                  전화상담과 인터넷 가입 모두 가능
+                </p>
+                <p className="bg-white py-3  w-full  text-center  hover:bg-blue-200 duration-150 rounded-full">
+                  보험이 어려우시다면
+                </p>
+                <p className="bg-white py-3  w-full  text-center  hover:bg-blue-200 duration-150 rounded-full">
+                  이미지,영상을 위한 공간입니다
+                </p>
+                <button className="w-full bg-white py-3  text-center  hover:bg-blue-200 duration-150 rounded-full">
+                  쉬운 보험가입 서비스
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 className="font-black text-2xl px-3 py-6">최근 많이 찾는 보험</h2>
+          <div className=" w-full flex flex-col items-center justify-between px-3">
+            <ul className="flex flex-col items-center w-full justify-between gap-2">
+              {items.map((item) => (
+                <li
+                  key={item.id}
+                  className="w-full  flex  justify-around items-center py-6  gap-1 border border-gray-200 shadow-xl rounded-2xl hover:bg-blue-400 duration-150"
+                >
+                  <h1>이미지</h1>
+                  <h2>{item.title}</h2>
+                  <p>{item.description}</p>
+                </li>
+              ))}
+            </ul>
+            <div className=" flex justify-between items-center    bg-blue-500 shadow-xl mt-5 w-[80%] ">
               <p>보험 가입 문의</p>
               <div>
                 <h2>빠르고 간편하게 보험 가입 상담</h2>
